@@ -168,7 +168,7 @@
         <div class="footer-bottom"><p>&copy; 2024 Wedu Webs. All rights reserved.</p></div>
     </footer>
 
-    <!-- Modals for Galleries -->
+    <!-- Modals para Galerías -->
     <div id="plomolife-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="plomolife-modal-image" src="img/portfolio/plomolife/1.png"></div></div></div></div>
     <div id="rp2-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="rp2-modal-image" src="img/portfolio/rp2/1.png"></div></div></div></div>
     <div id="chuches-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="chuches-modal-image" src="img/portfolio/chuches/1.png"></div></div></div></div>
@@ -176,7 +176,48 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // ... (el código JavaScript no necesita cambios)
+            // Lógica para el Menú Móvil (Hamburguesa)
+            const navToggle = document.querySelector(".nav-toggle");
+            const navMenu = document.querySelector(".nav-menu");
+            if (navToggle && navMenu) {
+                navToggle.addEventListener("click", () => {
+                    navMenu.classList.toggle("nav-menu_visible");
+                });
+            }
+
+            // --- Lógica para TODAS las Galerías Modales ---
+            const gridThumbnails = document.querySelectorAll('.grid-thumbnail');
+            const modals = document.querySelectorAll('.modal-overlay');
+            const closeButtons = document.querySelectorAll('.modal-close-button');
+
+            // Abrir el modal correspondiente
+            gridThumbnails.forEach(thumb => {
+                thumb.addEventListener('click', function() {
+                    const modalId = this.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        const modalImage = modal.querySelector('.modal-main-image img');
+                        modalImage.src = this.src;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            // Cerrar el modal con el botón X
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.closest('.modal-overlay').classList.remove('active');
+                });
+            });
+
+            // Cerrar el modal al hacer clic en el fondo
+            modals.forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.classList.remove('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
