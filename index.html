@@ -10,8 +10,11 @@
 </head>
 <body>
 
+    <div id="ripple-background"></div>
+    <div id="cursor-spotlight"></div>
+
     <div class="app-layout">
-        <!-- MENÚ LATERAL DE NAVEGACIÓN -->
+        <!-- MENÚ LATERAL DE NAVEGACIÓN (DESKTOP) -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <img src="img/logo.png" alt="WWebs Logo" class="logo">
@@ -31,7 +34,7 @@
             <!-- SECCIÓN 1: SOBRE MÍ -->
             <section id="sobre-mi" class="content-section active">
                 <div class="section-header">
-                    <h2>Transformando Ideas en Realidad Digital</h2>
+                    <h2 class="animated-text">Transformando Ideas en Realidad Digital</h2>
                     <p>Creo páginas web limpias, modernas y optimizadas para que tu proyecto, negocio o comunidad destaque en internet.</p>
                 </div>
                  <div class="features-container">
@@ -44,7 +47,7 @@
             <!-- SECCIÓN 2: PORTFOLIO -->
             <section id="portfolio" class="content-section hidden">
                 <div class="section-header">
-                    <h2>Mis Trabajos Recientes</h2>
+                    <h2 class="animated-text">Mis Trabajos Recientes</h2>
                     <p>Cada proyecto es una colaboración para lograr un objetivo. Aquí tienes algunos ejemplos.</p>
                 </div>
                 
@@ -61,14 +64,14 @@
                 </div>
 
                 <div class="portfolio-category">
-                    <div class="section-subtitle"><span><i class="fas fa-store"></i> CATEGORÍA: NEGOCIOS</span></div>
-                    <div class="portfolio-item">
-                        <h3>"Dulce Rincón" - Mesas de Chuches</h3>
-                        <p>Una cliente solicitaba una web sencilla, bonita y muy visual para su negocio de mesas de chuches. Se priorizó un diseño limpio que destacara sus productos a través de galerías de fotos y vídeos cortos.</p>
-                        <h4>Fotos</h4>
-                        <div class="gallery-grid"><img src="img/portfolio/chuches/1.png" class="grid-thumbnail" data-modal="chuches-modal"></div>
-                        <h4>Vídeos</h4>
-                        <div class="video-gallery"><video controls muted loop><source src="videos/chuches/video1.mp4" type="video/mp4"></video></div>
+                    <div class="section-subtitle"><span><i class="fas fa-plus-circle"></i> CATEGORÍA: EXTRAS</span></div>
+                     <div class="portfolio-item">
+                        <h3>Estadísticas y Análisis</h3>
+                        <p>Como extra, puedo integrar herramientas de análisis como Google Analytics en tu web. Esto te permitirá conocer el número de visitantes, su procedencia y su comportamiento en la página, datos clave para hacer crecer tu proyecto.</p>
+                        <div class="gallery-grid">
+                            <img src="img/portfolio/analytics/1.png" class="grid-thumbnail" data-modal="analytics-modal">
+                            <img src="img/portfolio/analytics/2.png" class="grid-thumbnail" data-modal="analytics-modal">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -76,7 +79,7 @@
             <!-- SECCIÓN 3: VALORACIONES -->
             <section id="valoraciones" class="content-section hidden">
                 <div class="section-header">
-                    <h2>Qué Dicen Mis Clientes</h2>
+                    <h2 class="animated-text">Qué Dicen Mis Clientes</h2>
                     <p>+23 valoraciones reales que respaldan la calidad y el compromiso en cada proyecto.</p>
                 </div>
                 <div class="reviews-grid">
@@ -89,7 +92,7 @@
             <!-- SECCIÓN 4: CONTACTO -->
             <section id="contacto" class="content-section hidden">
                 <div class="section-header">
-                    <h2>Consigue Tu Precio Ya</h2>
+                    <h2 class="animated-text">Consigue Tu Precio Ya</h2>
                     <p>Hablemos de tu proyecto. Contacta conmigo sin compromiso.</p>
                 </div>
                 <div class="contact-methods">
@@ -98,45 +101,102 @@
                     <a href="mailto:doritorresmolina@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><span>Email</span><p>doritorresmolina@gmail.com</p></a>
                 </div>
             </section>
-
         </main>
+
+        <!-- MENÚ INFERIOR (MÓVIL) -->
+        <nav class="mobile-nav">
+            <a href="#sobre-mi" class="mobile-nav-link active"><i class="fas fa-user"></i><span>Sobre Mí</span></a>
+            <a href="#portfolio" class="mobile-nav-link"><i class="fas fa-briefcase"></i><span>Portfolio</span></a>
+            <a href="#valoraciones" class="mobile-nav-link"><i class="fas fa-star"></i><span>Valorac.</span></a>
+            <a href="#contacto" class="mobile-nav-link"><i class="fas fa-paper-plane"></i><span>Contacto</span></a>
+        </nav>
     </div>
 
-    <!-- Modals para Galerías (siguen funcionando igual) -->
-    <div id="plomolife-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-main-image"><img src="img/portfolio/plomolife/1.png"></div></div></div>
-    <div id="chuches-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="main-image"><img src="img/portfolio/chuches/1.png"></div></div></div>
+    <!-- Modals para Galerías -->
+    <div id="plomolife-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img src="img/portfolio/plomolife/1.png"></div></div></div></div>
+    <div id="analytics-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img src="img/portfolio/analytics/1.png"></div></div></div></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+            const allNavLinks = document.querySelectorAll('.nav-link');
             const contentSections = document.querySelectorAll('.content-section');
-            const modals = document.querySelectorAll('.modal-overlay');
-            const gridThumbnails = document.querySelectorAll('.grid-thumbnail');
-            const closeButtons = document.querySelectorAll('.modal-close-button');
+            const rippleBackground = document.getElementById('ripple-background');
+            const spotlight = document.getElementById('cursor-spotlight');
 
-            // Lógica para cambiar de sección
-            navLinks.forEach(link => {
+            // --- ANIMACIÓN DE TEXTO ---
+            function animateText(element) {
+                const text = element.textContent;
+                element.innerHTML = '';
+                text.split('').forEach((char, index) => {
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    span.style.animationDelay = `${index * 0.05}s`;
+                    element.appendChild(span);
+                });
+            }
+
+            // --- NAVEGACIÓN SPA ---
+            function updateContent(targetId) {
+                contentSections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.remove('hidden');
+                        section.classList.add('active');
+                        // Animar el título de la sección activa
+                        const animatedTitle = section.querySelector('.animated-text');
+                        if (animatedTitle) {
+                            animateText(animatedTitle);
+                        }
+                    } else {
+                        section.classList.add('hidden');
+                        section.classList.remove('active');
+                    }
+                });
+            }
+
+            allNavLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                    
                     const targetId = this.getAttribute('href').substring(1);
-                    
-                    contentSections.forEach(section => {
-                        if (section.id === targetId) {
-                            section.classList.remove('hidden');
-                            section.classList.add('active');
-                        } else {
-                            section.classList.add('hidden');
-                            section.classList.remove('active');
-                        }
-                    });
+                    allNavLinks.forEach(l => l.classList.remove('active'));
+                    // Activar enlaces en ambos menús (desktop y mobile)
+                    document.querySelectorAll(`.nav-link[href="#${targetId}"]`).forEach(activeLink => activeLink.classList.add('active'));
+                    updateContent(targetId);
                 });
             });
 
-            // Lógica para las galerías modales
+            // Animar el texto de la primera sección al cargar
+            animateText(document.querySelector('#sobre-mi .animated-text'));
+
+            // --- EFECTOS DE CURSOR Y FONDO ---
+            let numRipples = Math.floor(window.innerWidth / 50) * Math.floor(window.innerHeight / 50);
+            for (let i = 0; i < numRipples; i++) {
+                const ripple = document.createElement('div');
+                ripple.classList.add('ripple');
+                rippleBackground.appendChild(ripple);
+            }
+            const ripples = document.querySelectorAll('.ripple');
+
+            window.addEventListener('mousemove', (e) => {
+                spotlight.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                
+                ripples.forEach(ripple => {
+                    const rect = ripple.getBoundingClientRect();
+                    const distance = Math.sqrt(Math.pow(rect.x + rect.width / 2 - e.clientX, 2) + Math.pow(rect.y + rect.height / 2 - e.clientY, 2));
+                    if (distance < 150) {
+                        ripple.style.transform = `scale(${1 - distance / 150})`;
+                        ripple.style.opacity = `${0.5 - (distance / 150) * 0.4}`;
+                    } else {
+                        ripple.style.transform = 'scale(0)';
+                        ripple.style.opacity = '0.1';
+                    }
+                });
+            });
+
+            // --- LÓGICA DE GALERÍAS MODALES ---
+            const gridThumbnails = document.querySelectorAll('.grid-thumbnail');
+            const modals = document.querySelectorAll('.modal-overlay');
+            const closeButtons = document.querySelectorAll('.modal-close-button');
+
             gridThumbnails.forEach(thumb => {
                 thumb.addEventListener('click', function() {
                     const modalId = this.getAttribute('data-modal');
@@ -149,10 +209,7 @@
                 });
             });
 
-            function closeModal(modal) {
-                modal.classList.remove('active');
-            }
-
+            function closeModal(modal) { modal.classList.remove('active'); }
             closeButtons.forEach(button => button.addEventListener('click', () => closeModal(button.closest('.modal-overlay'))));
             modals.forEach(modal => modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal) }));
         });
