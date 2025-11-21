@@ -3,194 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WWebs | Wedu Webs - Diseño y Desarrollo Web a Medida</title>
-    <meta name="description" content="Portfolio de Wedu Webs (WWebs). Diseño y desarrollo de páginas web a medida, estéticas y funcionales desde 20€. Contacta para tu proyecto.">
+    <title>WWebs - Desarrollo Web a Medida</title>
     <link rel="icon" type="image/png" href="img/logo.png">
-    <!-- Etiquetas SEO para multi-idioma -->
-    <link rel="alternate" hreflang="es" href="https://www.TU-DOMINIO.com/index.html">
-    <link rel="alternate" hreflang="en" href="https://www.TU-DOMINIO.com/en.html">
-    <link rel="alternate" hreflang="x-default" href="https://www.TU-DOMINIO.com/index.html">
-    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-    <header class="header">
-        <nav class="navbar">
-            <a href="#"><img src="img/logo.png" alt="WWebs Logo" class="logo"></a>
-            <div class="nav-menu">
-                <a href="#servicios">Servicios</a>
-                <a href="#ejemplos">Portfolio</a>
-                <a href="#contacto">Contacto</a>
-            </div>
-            <div class="language-switcher">
-                <a href="index.html" class="active">ES</a>
-                <span>/</span>
-                <a href="en.html">EN</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <div class="hero-subtitle">DISEÑO Y DESARROLLO WEB PROFESIONAL</div>
+    <div class="app-layout">
+        <!-- MENÚ LATERAL DE NAVEGACIÓN -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="img/logo.png" alt="WWebs Logo" class="logo">
                 <h1>WWebs</h1>
-                <p>Transformo tus ideas en una realidad digital, creando páginas web estéticas y funcionales a tu alcance. Especializado en diseños limpios y optimizados para que tu proyecto, negocio o comunidad destaque en internet.</p>
-                <div class="hero-buttons">
-                    <a href="#ejemplos" class="btn btn-primary">VER TRABAJOS</a>
-                    <a href="#contacto" class="btn btn-secondary">CONTACTAR</a>
-                </div>
             </div>
-        </section>
+            <nav class="sidebar-nav">
+                <a href="#sobre-mi" class="nav-link active"><i class="fas fa-user"></i> Sobre Mí</a>
+                <a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a>
+                <a href="#valoraciones" class="nav-link"><i class="fas fa-star"></i> Valoraciones</a>
+                <a href="#contacto" class="nav-link"><i class="fas fa-paper-plane"></i> Contacto</a>
+            </nav>
+        </aside>
 
-        <section id="servicios">
-             <div class="section-subtitle"><span><i class="fas fa-briefcase"></i> MIS SERVICIOS</span></div>
-             <h2>A QUÉ ME DEDICO</h2>
-             <div class="features-container">
-                 <div class="feature-card"><div class="icon-container"><i class="fas fa-palette"></i></div><h3>DISEÑO WEB A MEDIDA</h3><p>Creo webs desde cero con una estética limpia y clásica, totalmente personalizadas para reflejar la identidad de tu marca o comunidad.</p></div>
-                 <div class="feature-card"><div class="icon-container"><i class="fas fa-bolt"></i></div><h3>OPTIMIZACIÓN Y RENDIMIENTO</h3><p>Desarrollo páginas rápidas y fluidas, compatibles con todos los dispositivos, para ofrecer la mejor experiencia de usuario.</p></div>
-                 <div class="feature-card"><div class="icon-container"><i class="fas fa-euro-sign"></i></div><h3>PRECIOS INMEJORABLES</h3><p>Ofrezco soluciones de alta calidad a precios muy económicos para que cualquiera pueda tener su propia página web. ¡Webs desde solo 20€!</p></div>
-             </div>
-        </section>
+        <!-- CONTENIDO PRINCIPAL DINÁMICO -->
+        <main class="content">
 
-        <section id="ejemplos">
-            <div class="section-subtitle"><span><i class="fas fa-gamepad"></i> CATEGORÍA</span></div>
-            <h2>VIDEOJUEGOS</h2>
+            <!-- SECCIÓN 1: SOBRE MÍ -->
+            <section id="sobre-mi" class="content-section active">
+                <div class="section-header">
+                    <h2>Transformando Ideas en Realidad Digital</h2>
+                    <p>Creo páginas web limpias, modernas y optimizadas para que tu proyecto, negocio o comunidad destaque en internet.</p>
+                </div>
+                 <div class="features-container">
+                     <div class="feature-card"><div class="icon-container"><i class="fas fa-palette"></i></div><h3>DISEÑO WEB A MEDIDA</h3><p>Creo webs desde cero con una estética limpia y clásica, totalmente personalizadas para reflejar la identidad de tu marca.</p></div>
+                     <div class="feature-card"><div class="icon-container"><i class="fas fa-bolt"></i></div><h3>OPTIMIZACIÓN Y RENDIMIENTO</h3><p>Desarrollo páginas rápidas y fluidas, compatibles con todos los dispositivos, para la mejor experiencia de usuario.</p></div>
+                     <div class="feature-card"><div class="icon-container"><i class="fas fa-euro-sign"></i></div><h3>PRECIOS INMEJORABLES</h3><p>Ofrezco soluciones de alta calidad a precios económicos. **¡Webs desde solo 20€!**</p></div>
+                 </div>
+            </section>
 
-            <div class="portfolio-item">
-                <h3>PlomoLife - Web para Servidor de Roleplay</h3>
-                <p>El cliente buscaba una web inmersiva para su servidor de GTA V, con una estética oscura, una tipografía fuerte y galerías de imágenes dinámicas para mostrar la acción del juego. El resultado es una página que refleja la intensidad y la comunidad del servidor, incluyendo detalles como un cursor personalizado al gusto del cliente.</p>
-                <h4>Fotos</h4>
-                <div class="gallery-grid">
-                    <img src="img/portfolio/plomolife/1.png" class="grid-thumbnail" data-modal="plomolife-modal" alt="PlomoLife 1">
-                    <img src="img/portfolio/plomolife/2.png" class="grid-thumbnail" data-modal="plomolife-modal" alt="PlomoLife 2">
-                    <img src="img/portfolio/plomolife/3.png" class="grid-thumbnail" data-modal="plomolife-modal" alt="PlomoLife 3">
-                    <img src="img/portfolio/plomolife/4.png" class="grid-thumbnail" data-modal="plomolife-modal" alt="PlomoLife 4">
+            <!-- SECCIÓN 2: PORTFOLIO -->
+            <section id="portfolio" class="content-section hidden">
+                <div class="section-header">
+                    <h2>Mis Trabajos Recientes</h2>
+                    <p>Cada proyecto es una colaboración para lograr un objetivo. Aquí tienes algunos ejemplos.</p>
                 </div>
-                <h4>Vídeos</h4>
-                <div class="video-gallery">
-                    <video controls muted loop><source src="videos/plomolife/video1.mp4" type="video/mp4">Tu navegador no soporta vídeos.</video>
+                
+                <div class="portfolio-category">
+                    <div class="section-subtitle"><span><i class="fas fa-gamepad"></i> CATEGORÍA: VIDEOJUEGOS</span></div>
+                    <div class="portfolio-item">
+                        <h3>PlomoLife - Web para Servidor de Roleplay</h3>
+                        <p>El cliente buscaba una web inmersiva para su servidor de GTA V, con una estética oscura, una tipografía fuerte y galerías de imágenes dinámicas para mostrar la acción del juego. El resultado es una página que refleja la intensidad y la comunidad del servidor, incluyendo detalles como un cursor personalizado al gusto del cliente.</p>
+                        <h4>Fotos</h4>
+                        <div class="gallery-grid"><img src="img/portfolio/plomolife/1.png" class="grid-thumbnail" data-modal="plomolife-modal"></div>
+                        <h4>Vídeos</h4>
+                        <div class="video-gallery"><video controls muted loop><source src="videos/plomolife/video1.mp4" type="video/mp4"></video></div>
+                    </div>
                 </div>
-                <div class="portfolio-cta">
-                    <a href="https://plomolife.com" target="_blank" class="btn btn-primary">VER SITIO WEB EN VIVO</a>
-                </div>
-            </div>
 
-            <div class="portfolio-item">
-                <h3>Servidor RP con Audio Inmersivo</h3>
-                <p>Para este servidor de roleplay, el cliente quería una experiencia audiovisual completa. La solicitud principal fue incluir una canción de fondo que se reprodujera automáticamente al visitar la web, creando una atmósfera única desde el primer momento. También se integró un cursor personalizado y galerías de fotos y vídeos.</p>
-                <h4>Fotos</h4>
-                <div class="gallery-grid">
-                    <img src="img/portfolio/rp2/1.png" class="grid-thumbnail" data-modal="rp2-modal" alt="RP2 1">
-                    <img src="img/portfolio/rp2/2.png" class="grid-thumbnail" data-modal="rp2-modal" alt="RP2 2">
+                <div class="portfolio-category">
+                    <div class="section-subtitle"><span><i class="fas fa-store"></i> CATEGORÍA: NEGOCIOS</span></div>
+                    <div class="portfolio-item">
+                        <h3>"Dulce Rincón" - Mesas de Chuches</h3>
+                        <p>Una cliente solicitaba una web sencilla, bonita y muy visual para su negocio de mesas de chuches. Se priorizó un diseño limpio que destacara sus productos a través de galerías de fotos y vídeos cortos.</p>
+                        <h4>Fotos</h4>
+                        <div class="gallery-grid"><img src="img/portfolio/chuches/1.png" class="grid-thumbnail" data-modal="chuches-modal"></div>
+                        <h4>Vídeos</h4>
+                        <div class="video-gallery"><video controls muted loop><source src="videos/chuches/video1.mp4" type="video/mp4"></video></div>
+                    </div>
                 </div>
-                <h4>Vídeos</h4>
-                <div class="video-gallery">
-                    <video controls muted loop><source src="videos/rp2/video1.mp4" type="video/mp4">Tu navegador no soporta vídeos.</video>
+            </section>
+
+            <!-- SECCIÓN 3: VALORACIONES -->
+            <section id="valoraciones" class="content-section hidden">
+                <div class="section-header">
+                    <h2>Qué Dicen Mis Clientes</h2>
+                    <p>+23 valoraciones reales que respaldan la calidad y el compromiso en cada proyecto.</p>
                 </div>
-                <div class="portfolio-cta">
-                    <a href="https://clandestinov2.com" target="_blank" class="btn btn-primary">VER SITIO WEB EN VIVO</a>
+                <div class="reviews-grid">
+                    <div class="review-card"><div class="review-author"><img src="img/avatars/avatar1.png"><div><h4>Laura G.</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"Un trabajo impecable. Entendió perfectamente la estética que buscaba y entregó la web en un tiempo récord. ¡Totalmente recomendado!"</p></div>
+                    <div class="review-card"><div class="review-author"><img src="img/avatars/avatar2.png"><div><h4>Carlos M.</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"No creía que pudiera tener una web tan profesional por este precio. La comunicación fue excelente durante todo el proceso. ¡Un 10!"</p></div>
+                    <div class="review-card"><div class="review-author"><img src="img/avatars/avatar3.png"><div><h4>GamingZoneRP</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"Le pedimos detalles muy específicos como un cursor personalizado y música de fondo, y lo implementó todo a la perfección. La comunidad está encantada."</p></div>
                 </div>
-            </div>
+            </section>
             
-            <div class="portfolio-item">
-                <h3>Simulador Militar Táctico</h3>
-                <p>El cliente, una comunidad de simulación militar (Milsim), requería una web seria y profesional que sirviera como centro de operaciones. La necesidad principal era un diseño oscuro y táctico que reflejara la atmósfera del simulador, con secciones claras para el reclutamiento, normativas y guías de combate. El resultado es una plataforma robusta que proyecta autoridad y organización.</p>
-                <div class="portfolio-cta">
-                    <a href="https://operation-warsim.com" target="_blank" class="btn btn-primary">VER SITIO WEB EN VIVO</a>
+            <!-- SECCIÓN 4: CONTACTO -->
+            <section id="contacto" class="content-section hidden">
+                <div class="section-header">
+                    <h2>Consigue Tu Precio Ya</h2>
+                    <p>Hablemos de tu proyecto. Contacta conmigo sin compromiso.</p>
                 </div>
-            </div>
-
-            <div class="section-subtitle" style="margin-top: 4rem;"><span><i class="fas fa-store"></i> CATEGORÍA</span></div>
-            <h2>NEGOCIOS Y EMPRENDIMIENTOS</h2>
-
-            <div class="portfolio-item">
-                <h3>"Dulce Rincón" - Mesas de Chuches</h3>
-                <p>Una cliente solicitaba una web sencilla, bonita y muy visual para su nuevo negocio de mesas de chuches para eventos. Se priorizó un diseño limpio y elegante que destacara la calidad de sus productos a través de galerías de fotos y vídeos cortos.</p>
-                <h4>Fotos</h4>
-                <div class="gallery-grid">
-                    <img src="img/portfolio/chuches/1.png" class="grid-thumbnail" data-modal="chuches-modal" alt="Chuches 1">
-                    <img src="img/portfolio/chuches/2.png" class="grid-thumbnail" data-modal="chuches-modal" alt="Chuches 2">
+                <div class="contact-methods">
+                    <a href="https://discordapp.com/users/wedutm" target="_blank" class="contact-card"><i class="fab fa-discord"></i><span>Discord</span><p>wedutm</p></a>
+                    <a href="https://wa.me/634486006" target="_blank" class="contact-card"><i class="fab fa-whatsapp"></i><span>WhatsApp</span><p>634 48 60 06</p></a>
+                    <a href="mailto:doritorresmolina@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><span>Email</span><p>doritorresmolina@gmail.com</p></a>
                 </div>
-                <h4>Vídeos</h4>
-                <div class="video-gallery">
-                    <video controls muted loop><source src="videos/chuches/video1.mp4" type="video/mp4">Tu navegador no soporta vídeos.</video>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="extras">
-            <div class="section-subtitle"><span><i class="fas fa-plus-circle"></i> SERVICIOS EXTRA</span></div>
-            <h2>ESTADÍSTICAS Y ANÁLISIS</h2>
-            <p>Como extra, puedo integrar herramientas de análisis como Google Analytics en tu web. Esto te permitirá conocer el número de visitantes, su procedencia y su comportamiento en la página, datos clave para hacer crecer tu proyecto.</p>
-            <div class="gallery-grid">
-                <img src="img/portfolio/analytics/1.png" class="grid-thumbnail" data-modal="analytics-modal" alt="Analytics 1">
-                <img src="img/portfolio/analytics/2.png" class="grid-thumbnail" data-modal="analytics-modal" alt="Analytics 2">
-            </div>
-        </section>
+        </main>
+    </div>
 
-        <section id="reviews">
-            <div class="section-subtitle"><span><i class="fas fa-star"></i> +23 VALORACIONES REALES</span></div>
-            <h2>QUÉ DICEN MIS CLIENTES</h2>
-            <div class="reviews-grid">
-                <div class="review-card"><div class="review-author"><img src="img/avatars/avatar1.png" alt="Avatar"><div><h4>Laura G.</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"Un trabajo impecable. Entendió perfectamente la estética que buscaba y entregó la web en un tiempo récord. ¡Totalmente recomendado!"</p></div>
-                <div class="review-card"><div class="review-author"><img src="img/avatars/avatar2.png" alt="Avatar"><div><h4>Carlos M.</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"No creía que pudiera tener una web tan profesional por este precio. La comunicación fue excelente durante todo el proceso. ¡Un 10!"</p></div>
-                <div class="review-card"><div class="review-author"><img src="img/avatars/avatar3.png" alt="Avatar"><div><h4>GamingZoneRP</h4><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div><p>"Le pedimos detalles muy específicos como un cursor personalizado y música de fondo, y lo implementó todo a la perfección. La comunidad está encantada."</p></div>
-            </div>
-        </section>
-        
-        <section id="contacto">
-            <div class="section-subtitle"><span><i class="fas fa-rocket"></i> EMPIEZA TU PROYECTO</span></div>
-            <h2>CONSIGUE TU PRECIO YA</h2>
-            <div class="contact-methods">
-                <a href="https://discordapp.com/users/wedutm" target="_blank" class="contact-card"><i class="fab fa-discord"></i><span>Discord</span><p>wedutm</p></a>
-                <a href="https://wa.me/634486006" target="_blank" class="contact-card"><i class="fab fa-whatsapp"></i><span>WhatsApp</span><p>634 48 60 06</p></a>
-                <a href="mailto:doritorresmolina@gmail.com" class="contact-card"><i class="fas fa-envelope"></i><span>Email</span><p>doritorresmolina@gmail.com</p></a>
-            </div>
-        </section>
-
-        <div class="logo-scroller-section">
-            <div class="partners-track">
-                <img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo">
-                <img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo"><img src="img/logo.png" alt="WWebs Logo">
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column"><img src="img/logo.png" alt="WWebs Logo" class="footer-logo"></div>
-            <div class="footer-column"><h4>WWebs</h4><p>Diseño y desarrollo web a medida.</p></div>
-            <div class="footer-column"><h4>ENLACES RÁPIDOS</h4><ul><li><a href="#servicios">Servicios</a></li><li><a href="#ejemplos">Portfolio</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2024 Wedu Webs. Todos los derechos reservados.</p></div>
-    </footer>
-
-    <!-- Modals para Galerías -->
-    <div id="plomolife-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="plomolife-modal-image" src="img/portfolio/plomolife/1.png"></div></div></div></div>
-    <div id="rp2-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="rp2-modal-image" src="img/portfolio/rp2/1.png"></div></div></div></div>
-    <div id="chuches-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="chuches-modal-image" src="img/portfolio/chuches/1.png"></div></div></div></div>
-    <div id="analytics-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-gallery-body"><div class="modal-main-image"><img id="analytics-modal-image" src="img/portfolio/analytics/1.png"></div></div></div></div>
+    <!-- Modals para Galerías (siguen funcionando igual) -->
+    <div id="plomolife-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="modal-main-image"><img src="img/portfolio/plomolife/1.png"></div></div></div>
+    <div id="chuches-modal" class="modal-overlay"><div class="modal-content"><button class="modal-close-button">&times;</button><div class="main-image"><img src="img/portfolio/chuches/1.png"></div></div></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Lógica para el Menú Móvil (Hamburguesa)
-            const navToggle = document.querySelector(".nav-toggle");
-            const navMenu = document.querySelector(".nav-menu");
-            if (navToggle && navMenu) {
-                navToggle.addEventListener("click", () => {
-                    navMenu.classList.toggle("nav-menu_visible");
-                });
-            }
-
-            // --- Lógica para TODAS las Galerías Modales ---
-            const gridThumbnails = document.querySelectorAll('.grid-thumbnail');
+            const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
             const modals = document.querySelectorAll('.modal-overlay');
+            const gridThumbnails = document.querySelectorAll('.grid-thumbnail');
             const closeButtons = document.querySelectorAll('.modal-close-button');
 
-            // Abrir el modal correspondiente
+            // Lógica para cambiar de sección
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    contentSections.forEach(section => {
+                        if (section.id === targetId) {
+                            section.classList.remove('hidden');
+                            section.classList.add('active');
+                        } else {
+                            section.classList.add('hidden');
+                            section.classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Lógica para las galerías modales
             gridThumbnails.forEach(thumb => {
                 thumb.addEventListener('click', function() {
                     const modalId = this.getAttribute('data-modal');
@@ -203,21 +149,12 @@
                 });
             });
 
-            // Cerrar el modal con el botón X
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    this.closest('.modal-overlay').classList.remove('active');
-                });
-            });
+            function closeModal(modal) {
+                modal.classList.remove('active');
+            }
 
-            // Cerrar el modal al hacer clic en el fondo
-            modals.forEach(modal => {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        this.classList.remove('active');
-                    }
-                });
-            });
+            closeButtons.forEach(button => button.addEventListener('click', () => closeModal(button.closest('.modal-overlay'))));
+            modals.forEach(modal => modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal) }));
         });
     </script>
 </body>
