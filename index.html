@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeduWebs · Calidad Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Fondo de Estrellas -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- NAVBAR PREMIUM -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="logo.png" alt="WeduWebs Logo" class="main-logo">
+                <span class="logo-text">Wedu<span class="accent">Webs</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#bots">Bots</a>
+                <a href="#reviews">Reseñas</a>
+                <!-- Botón escritorio -->
+                <a href="https://discord.gg/PNJZnUBhpV" target="_blank" class="btn-primary nav-btn-desktop">Contactar</a>
+            </div>
+            <!-- Botón móvil -->
+            <a href="https://discord.gg/PNJZnUBhpV" target="_blank" class="btn-primary nav-btn-mobile">Contactar</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    <i data-lucide="sparkles"></i> +23 reseñas · 5.0★ de media
+                </div>
+                <h1 class="hero-title">
+                    Tu web.<br>
+                    <span class="shimmer-text">Tu universo.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Webs 100% personalizadas a <strong>pago único</strong>. Sin cuotas. Sin límites. Solo calidad real al mejor precio del universo.
+                </p>
+                <div class="hero-btns">
+                    <a href="https://discord.gg/PNJZnUBhpV" target="_blank" class="btn-cta">
+                        Pide tu web ahora <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="btn-secondary">Ver portfolio</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="planet-container">
+                    <div class="planet"><div class="planet-texture"></div></div>
+                    <div class="orbit-ring ring-1"><div class="dot"></div></div>
+                    <div class="orbit-ring ring-2"><div class="dot"></div></div>
+                    <div class="orbit-ring ring-3"><div class="dot"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="stat-card" data-target="23" data-suffix="+"><div class="stat-value">0</div><p>Reseñas 5★</p></div>
+                <div class="stat-card" data-target="50" data-suffix="+"><div class="stat-value">0</div><p>Webs entregadas</p></div>
+                <div class="stat-card" data-target="10000" data-suffix="+"><div class="stat-value">0</div><p>Usuarios</p></div>
+                <div class="stat-card" data-target="100" data-suffix="%"><div class="stat-value">0</div><p>Satisfacción</p></div>
+            </div>
+        </section>
+
+        <!-- WEB FEATURES CAROUSEL -->
+        <section class="features-section">
+            <div class="section-header">
+                <p class="overline">¿Por qué WWebs?</p>
+                <h2>Orbita por encima <span class="text-blue">del resto.</span></h2>
+            </div>
+            <div class="carousel-container" id="web-carousel">
+                <div class="carousel-dots"></div>
+                <div class="carousel-viewport"></div>
+                <div class="carousel-nav">
+                    <button class="prev"><i data-lucide="chevron-left"></i></button>
+                    <button class="next"><i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-header">
+                <p class="overline">Portfolio</p>
+                <h2>Proyectos reales. <span class="text-blue">Resultados reales.</span></h2>
+            </div>
+            <div class="portfolio-grid">
+                <a href="https://operation-warsim.com" target="_blank" class="project-card holo-card">
+                    <div class="project-bg" style="background-image: url('webporyectowarsim.jpg');"></div>
+                    <div class="project-content">
+                        <span class="project-tag">GTA V MilSim</span>
+                        <h3>Operation Warsim</h3>
+                        <p>Servidor de Roleplay GTA V MilSim</p>
+                        <div class="project-link">Visitar web <i data-lucide="external-link"></i></div>
+                    </div>
+                </a>
+                <a href="https://skylinerp.es" target="_blank" class="project-card holo-card">
+                    <div class="project-bg" style="background-image: url('webskyline.jpg');"></div>
+                    <div class="project-content">
+                        <span class="project-tag">GTA V RP</span>
+                        <h3>SkylineRP</h3>
+                        <p>Servidor de Roleplay serio GTA V</p>
+                        <div class="project-link">Visitar web <i data-lucide="external-link"></i></div>
+                    </div>
+                </a>
+                <a href="https://plomolife.com" target="_blank" class="project-card holo-card">
+                    <div class="project-bg" style="background-image: url('webplomo.jpg');"></div>
+                    <div class="project-content">
+                        <span class="project-tag">+10K usuarios</span>
+                        <h3>PlomoLife</h3>
+                        <p>Servidor RP serio · +10.000 usuarios</p>
+                        <div class="project-link">Visitar web <i data-lucide="external-link"></i></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- BOTS SECTION -->
+        <section id="bots" class="features-section">
+            <div class="section-header">
+                <p class="overline">Bots de Discord</p>
+                <h2>Tu bot. <span class="text-blue">Tu servidor.</span></h2>
+            </div>
+            <div class="carousel-container" id="bot-carousel">
+                <div class="carousel-dots"></div>
+                <div class="carousel-viewport"></div>
+                <div class="carousel-nav">
+                    <button class="prev"><i data-lucide="chevron-left"></i></button>
+                    <button class="next"><i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS SECTION (EXACTO A LA IMAGEN) -->
+        <section id="reviews" class="reviews-section">
+            <div class="reviews-header-premium">
+                <p class="overline-blue">RESEÑAS</p>
+                <h2 class="reviews-main-title">
+                    +23 clientes<br>
+                    <span class="gold-text-solid">lo confirman.</span>
+                </h2>
+                <div class="rating-container-new">
+                    <div class="stars-row">
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                        <i data-lucide="star" class="star-filled"></i>
+                    </div>
+                    <div class="rating-text-row">
+                        <span class="rating-score">5.0</span>
+                        <span class="rating-label">de media</span>
+                    </div>
+                </div>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee" id="marquee1"></div>
+                <div class="marquee marquee-delayed" id="marquee2"></div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="cta-card">
+                <h2>¿Listo para lanzar<br>tu web?</h2>
+                <p>Contacta por Discord. Sin compromiso. Pago único, calidad premium.</p>
+                <a href="https://discord.gg/PNJZnUBhpV" target="_blank" class="btn-white">
+                    Contactar en Discord <i data-lucide="chevron-right"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo-block">
+                <img src="logo.png" alt="Logo" class="footer-logo">
+                <span class="logo-text">Wedu<span class="accent">Webs</span></span>
+            </div>
+            <p class="footer-copy">© 2025 WeduWebs · Todos los derechos reservados.</p>
+            <div class="footer-social">
+                <a href="https://discord.gg/PNJZnUBhpV" target="_blank">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
